@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% block style %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block title %}New Contact{% endblock %}
+
+{% block content %}
+    <form class="form-inline my-2 my-lg-0" action = "{{url_for('addrec')}}" method = "POST">
+        <h3>Please enter your contact information.</h3>
+        Name<br>
+        <input type	=	"text" name	=	"nm" /></br>
+        Phone<br><input type="tel" name="tl"><br>
+        Email<br><input type="email" name="em">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+    </form>
+{% endblock %}
+</html>
